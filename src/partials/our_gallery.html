@@ -1,0 +1,57 @@
+<h2 class="heading-title">Live The <span> Experence </span></h2>
+<div class="gallery-top">
+    <div class="left-content">
+        <div class="gallery-item">
+            <a href="#" data-open="image0"><img src="assets/img/gallery/gallery_01_small.jpg"><!--COFFEE ON A TABLE-->
+        </div><!--GALLERY ITEM-->
+    </div><!--LEFT CONTENT-->
+
+    <div class="right-content">
+        <div class="right-container">
+        <div class="gallery-item two-cols">
+            <a href="#" data-open="image1"><img src="assets/img/gallery/gallery_02_small.jpg"><!--COFFEE ON A TABLE-->
+        </div><!--gallery item two cols-->
+
+        <div class="gallery-item ">
+            <a href="#" data-open="image2"><img src="assets/img/gallery/gallery_03_small.jpg"><!--COFFEE ON A TABLE-->
+        </div>
+
+        <div class="gallery-item ">
+            <a href="#" data-open="image3"><img src="assets/img/gallery/gallery_04_small.jpg"><!--COFFEE ON A TABLE-->
+        </div>
+
+        <div class="gallery-item two-cols">
+            <a href="#" data-open="image4"><img src="assets/img/gallery/gallery_05_small.jpg"><!--COFFEE ON A TABLE-->
+        </div>
+
+
+
+        </div><!--RIGHT CONTAINER-->
+    </div><!--RIGHT CONTENT-->
+</div><!--GALLERY TOP-->
+    <div class="gallery-bottom">
+                <div class="gallery-item two-cols">
+            <a href="#" data-open="image5"><img src="assets/img/gallery/gallery_06_small.jpg"><!--COFFEE ON A TABLE-->
+        </div><!--GALLERY ITEM-->
+            <div class="gallery-item">
+                <a href="#" data-open="image6"><img src="assets/img/gallery/gallery_07_small.jpg"><!--COFFEE ON A TABLE-->
+            </div>
+        <div class="right-content">
+        <div class="gallery-item ">
+            <a href="#" data-open="image7"><img src="assets/img/gallery/gallery_08_small.jpg"><!--COFFEE ON A TABLE-->
+        </div>
+
+        <div class="gallery-item ">
+            <a href="#" data-open="image8"><img src="assets/img/gallery/gallery_09_small.jpg"><!--COFFEE ON A TABLE-->
+        </div>
+        </div><!--IMAGE RIGHT CONTNENT-->
+    </div><!--GALLERY BOTTOM-->
+
+{{#each gallery.gallery}}
+<div class="reveal large" id="image{{@index}}" data-reveal data-animation-in="reveal-in">
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+<img src="{{this.url}}">
+</div>
+{{/each}}
