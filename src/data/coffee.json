@@ -11,7 +11,7 @@
          "desc":"Espresso with cream, and Whippead Cream"
       },
       {
-         "name":"caffee americano",
+         "name":"coffee americano",
          "price":"2.95",
          "desc":"Espresso Shots and Light Layer of Cream"
       },
@@ -40,7 +40,7 @@
       {
          "name":"grilled chicken sandwich",
          "price":"12.95",
-         "desc":"breaded chicken or cauliflower hummus \u0003pickles caramelized onions & sriracha"
+         "desc":"Breaded chicken or cauliflower hummus \u0003pickles caramelized onions & sriracha"
       },
       {
          "name":"turkey breast sandwich",

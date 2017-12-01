@@ -365,6 +365,27 @@ main.page-about{
 /* PRODUCT LIST STYLES */
     .product-list{
         list-style: none;
+        li{
+            @include xy-grid();
+            .product{
+                @include xy-cell(8);
+                p.name{
+                    @include text-transform(uppercase);
+                    @include font-bold(900);
+                }
+                p.description{
+                    color: $secondary-color;
+                }
+            }
+            .price{
+                @include xy-cell(4);
+                p{
+                    text-align: right;
+                    font-size: rem-calc(30);
+                    @include font-bold(900);
+                }
+            }
+        }
     }
 
 /** Process */
