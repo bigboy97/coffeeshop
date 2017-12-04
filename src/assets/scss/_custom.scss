@@ -1,4 +1,27 @@
 /* coffee shop custom styles */
+.entireForm{
+    display: flex;
+    align-items: center;
+}
+.input input{
+    border: solid 4px $primary-color;
+}
+.input span{
+    font-weight: 1000;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: orange;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: orange;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: orange;
+}
+
 // Fade effect mixin
 @mixin faded_black() {
     background: linear-gradient(to bottom, rgba(0,0,0,.7) 20% , rgba(0,0,0,.3)  );
@@ -56,7 +79,9 @@ $bellefair: 'Bellefair', serif;
     &.gallery{
         @include background-image(gallery);
     }
-
+    &.contact{
+        @include background-image(contact);
+    }
 
     .header-content{
             padding-top: rem-calc(30);
@@ -516,13 +541,60 @@ main.page-about{
     @include xy-grid();
     @include flex-align(center, middle );
     .orbit {
-        background-color: $white;
+        background-color: #EBE7DE;
         @include xy-cell(10);
         border-left: rem-calc(5) solid $primary-color;
         li {
             
             div {
                 @include padding(2, 4, 2, 4);
+            }
+        }
+    }
+}
+
+
+//=====================================================================================
+// Index Page - About us
+
+.about-us-homepage {
+    @include breakpoint(medium) {
+        @include xy-cell(80%);
+        @include xy-cell-offset(10%);
+    }
+    p {
+        text-align: center;
+        line-height: rem-calc(40);
+        font-size: rem-calc(18);
+    }
+
+    .category-icons {
+        @include xy-grid();
+        .icon {
+            @include xy-cell();
+            @include breakpoint(medium) {
+                @include xy-cell(4);
+            }
+            height: rem-calc(260);
+            background-position: center center;
+            background-size: rem-calc(120%);
+            background-repeat: no-repeat;
+            @include flex();
+            @include flex-align(center, top);
+            &.coffee {
+                background-image: url(../img/icon_coffee.svg);
+            }
+            &.desserts {
+                background-image: url(../img/icon_dessert.svg);
+            }
+            &.tea {
+                background-image: url(../img/icon_tea.svg);
+            }
+            h3 {
+                text-align: center;
+                font-family: $bellefair;
+                color: $primary-color;
+                font-size: rem-calc(38);
             }
         }
     }
